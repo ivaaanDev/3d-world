@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+        <a-assets>
+          <a-asset-item id="crash" src="./3dmodels/crash_bandicoot_crash_4_its_about_time.glb"></a-asset-item>
+          <a-asset-item id="rayman" src="./3dmodels/rayman.glb"></a-asset-item>
+          <a-asset-item id="jibanyan" src="./3dmodels/busters_jibanyan.glb"></a-asset-item>
+          <a-asset-item id="sonic" src="./3dmodels/2011x_sonic_exe.glb"></a-asset-item>
+          <a-asset-item id="tung" src="./3dmodels/tung_tung_tung_sahur.glb"></a-asset-item>
+        </a-assets>
+              
+        <a-entity position="0 1 -5" 
+                  animation="property: rotation; to: 0 360 0; loop: true; dur: 4000; easing: linear">
+          <a-entity gltf-model="#crash" scale="2 2 2"></a-entity>
+        </a-entity>
+
+        <a-entity position="10 3.5 -5" 
+                  animation="property: position; to: 10 4.5 -5; dir: alternate; loop: true; dur: 2000; easing: easeInOutSine">
+          <a-entity gltf-model="#rayman" scale="15 15 15"></a-entity>
+        </a-entity>
+
+        <a-entity position="20 1 -5" 
+                  animation="property: scale; to: 1.2 1.2 1.2; dir: alternate; loop: true; dur: 800; easing: easeInOutQuad">
+          <a-entity gltf-model="#jibanyan" scale="2 2 2"></a-entity>
+        </a-entity>
+
+        <a-entity position="28 1 -5" 
+                  animation="property: position; to: 32 1 -5; dir: alternate; loop: true; dur: 3000; easing: easeInOutQuad">
+          <a-entity gltf-model="#sonic" scale="2 2 2"></a-entity>
+        </a-entity>
+
+        <a-entity position="40 1 -5" 
+                  animation="property: rotation; to: 0 360 0; loop: true; dur: 4000; easing: linear">
+          <a-entity gltf-model="#tung" scale="2 2 2"></a-entity>
+        </a-entity>
+
+      <a-plane position="15 0 -4" rotation="-90 0 0" width="100" height="10" color="#7BC8A4"></a-plane>
+      <a-sky color="#ECECEC"></a-sky>
+    </a-scene>
+  </body>
+</html>
